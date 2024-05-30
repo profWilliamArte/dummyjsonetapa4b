@@ -27,7 +27,7 @@ const Card = ({producto}) => {
     const totalProd=getCantidad(producto)
 
 
-    const precioFinal = producto.price - (producto.price * (producto.discountPercentage / 100));
+    const precioFinal = producto.price - ((producto.price * producto.discountPercentage) / 100);
     return ( 
     <>
         <div className="col-sm-6 col-md-4 col-lg-3  mb-4" >
@@ -48,10 +48,10 @@ const Card = ({producto}) => {
                     <p className="text-success">Stock: {producto.stock}</p>
 
                     <p className="text-danger">
-                        Precio: {producto.price.toFixed(0).toLocaleString()}$
+                        Precio: {producto.price.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 })}$
                         <br/>
-                    <span className="text-danger">Desc: {producto.discountPercentage.toFixed(0).toLocaleString()}%</span><br/>
-                    <span className="text-danger">Precio Final: {precioFinal.toFixed(0).toLocaleString()}$</span></p>
+                    <span className="text-danger">Desc: {producto.discountPercentage.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 })}%</span><br/>
+                    <span className="text-danger">Precio Final: {precioFinal.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 })}$</span></p>
                     
                     <hr/>
                     <button className="btn btn-danger btn-sm mx-1"  onClick={handleShow}>Detalle</button>
