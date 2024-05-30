@@ -20,6 +20,7 @@ import { carritoContext } from "../contexts/carritoContext";
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import {RutasProtegidas} from './RutasProtegidas'
+import MiscomprasSn from '../pages/MiscomprasSn'
 const Rutas = () => {
     const { validado } = useContext(carritoContext)
   return (
@@ -36,7 +37,7 @@ const Rutas = () => {
             <Route path='/busquedas' element={<Busquedas />}/>
 
             <Route element={<RutasProtegidas validado={validado}/>}>
-                <Route path="/miscompras" element={<Miscompras/>} />
+                <Route path="/miscompras" element={<MiscomprasSn/>} />
                 <Route path="/verdetalle" element={<Verdetalle/>} />
                 <Route path="/productos" element={<Productos/>} />
             </Route>
