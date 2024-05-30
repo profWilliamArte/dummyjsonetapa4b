@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react-swc'
 
 export default defineConfig({
   plugins: [react()],
-    //base: "https://profWilliamArte.github.io/dummyjsonetapa3",
+  //base: "https://profWilliamArte.github.io/dummyjsonetapa4",
   })     

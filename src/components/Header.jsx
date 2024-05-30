@@ -87,6 +87,26 @@ const Header = () => {
                 <li className="nav-item">
                     <Link to="/contactos" className="nav-link">Contactos</Link>
                 </li>
+
+                {
+                validado ?
+                    <>
+
+
+                <li className="nav-item">
+                    <Link to="/productos" className="nav-link">Productos</Link>
+                </li>
+
+                <li className="nav-item">
+                    <Link to="/miscompras" className="nav-link">Mis Compras</Link>
+                </li>
+
+                </>
+                : null
+                }
+
+
+
                 <li className="nav-item mx-4">
                 {
                 validado ?
